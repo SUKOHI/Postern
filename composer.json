@@ -1,6 +1,7 @@
 {
     "name": "sukohi/postern",
-    "description": "",
+    "description": "PHP class that mainly developed for Laravel to sign in to user page easily in development environment.",
+    "license": "MIT",
     "authors": [
         {
             "name": "Sukohi",
@@ -8,14 +9,10 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "laravel/framework": "~5.0"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
-        "psr-0": {
+        "psr-4": {
             "Sukohi\\Postern\\": "src/"
         }
     },
