@@ -34,7 +34,7 @@ Also alias
 
     'aliases' => [
         ...Others...,  
-        'Postern'   => Sukohi\Postern\Facades\\Postern::class
+        'Postern'   => Sukohi\Postern\Facades\Postern::class
     ]
 
 Usage
