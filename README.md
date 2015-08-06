@@ -1,28 +1,41 @@
 Postern
 =====
 
-PHP class that mainly developed for Laravel 4 to sign in to user page easily in development environment.
+PHP class that mainly developed for Laravel to sign in to user page easily in development environment.  
+(This is for Laravel 4.2. [For Laravel 5+](https://github.com/SUKOHI/Postern))
 
 Requirements
 ====
 
-jQuery
+[jQuery](https://github.com/jquery/jquery)
 
 
-Installation&setting for Laravel
+Installation
 ====
 
-After installation using composer, add the followings to the array in  app/config/app.php
+Add this package name in composer.json
 
-    'providers' => array(  
+    "require": {
+      "sukohi/postern": "1.*"
+    }
+
+Execute composer command.
+
+    composer update
+
+Register the service provider in app.php
+
+    'providers' => [
         ...Others...,  
         'Sukohi\Postern\PosternServiceProvider',
-    )
+    ]
 
-    'aliases' => array(  
+Also alias
+
+    'aliases' => [
         ...Others...,  
         'Postern' => 'Sukohi\Postern\Facades\Postern',
-    )
+    ]
 
 Usage
 ====
