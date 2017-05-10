@@ -29,7 +29,7 @@ class PosternServiceProvider extends ServiceProvider {
 
     public function register()
     {
-        $this->app['postern'] = $this->app->share(function($app)
+        $this->app->singleton('postern', function()
         {
             return new Postern;
         });
