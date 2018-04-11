@@ -21,7 +21,10 @@
         "laravel": {
             "providers": [
                 "Sukohi\\Postern\\PosternServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Postern": "Sukohi\\Postern\\Facades\\Postern"
+            }
         }
     }
 }
