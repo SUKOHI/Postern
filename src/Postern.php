@@ -1,6 +1,5 @@
 <?php namespace Sukohi\Postern;
 
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\HTML;
 
 class Postern {
@@ -28,7 +27,7 @@ class Postern {
 
     public function render($delimiter = '&nbsp;|&nbsp;') {
 
-        if(App::isLocal() || !$this->_local_only) {
+        if(app()->isLocal() || !$this->_local_only) {
 
             $credential_links = [];
 
