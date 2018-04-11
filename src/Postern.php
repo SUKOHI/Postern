@@ -62,11 +62,11 @@ class Postern {
 
         foreach ($keys as $key) {
 
-            $value_code .= '$(\'input[name='. $key .']\').val(\''. $credentials[$key] .'\');';
+            $value_code .= 'document.querySelector(\'input[name='. $key .']\').value=\''. $credentials[$key] .'\';';
 
         }
 
-        return $value_code .'$(\'form[name='. $this->_form_name .']\').closest(\'form\').submit();';
+        return $value_code .'document.querySelector(\'form[name='. $this->_form_name .']\').submit();';
 
     }
 
