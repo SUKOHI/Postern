@@ -4,24 +4,14 @@ Postern
 PHP class that mainly developed for Laravel to sign in to user page easily in development environment.  
 (This is for Laravel 5+. [For Laravel 4.2](https://github.com/SUKOHI/Postern/tree/1.0))
 
-Requirements
-====
-
-[jQuery](https://github.com/jquery/jquery)
-
-
 Installation
 ====
 
-Add this package name in composer.json
-
-    "require": {
-      "sukohi/postern": "2.*"
-    }
-
 Execute composer command.
 
-    composer update
+    composer require sukohi/postern:2.*
+
+If your Laravel's version is 5.5+, the installation is done!
 
 Register the service provider in app.php
 
@@ -57,12 +47,12 @@ Usage
 	{!! \Postern::form('form_name')
             ->credentials('Admin Login', ['email' => 'admin@example.com', 'password' => 'admin'])
             ->credentials('User Login', ['email' => 'user@example.com', 'password' => 'user'])
-            ->localOnly($boolean = true)    // skippable
+            ->localOnly($boolean = true)    // optional
             ->render()
     !!}
     
-* credentials() can be used repeatedly.
-* If you'd like to use in prod environment, set localOnly(false).
+* You can repeatedly use credentials().
+* If you'd like to use this package in production environment, set localOnly(false).
 
 
 License
